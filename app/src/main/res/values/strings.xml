@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Clicer</string>
+    <string name="click_button">
+        <![CDATA[<?xml version=\"1.0\" encoding=\"utf-8\"?><resources><string name=\"app_name\">Clicker</string><string name=\"click_button\">Play Cat Sound</string><!-- Add this line --></resources>]]></string>
+</resources>
