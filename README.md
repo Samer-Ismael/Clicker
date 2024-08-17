@@ -15,9 +15,8 @@ To start using Clicker, follow these steps:
 First, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/clicker.git
-cd clicker
-a sound.
+git clone https://github.com/Samer-Ismael/Clicker.git
+
 ```
 
 ### **2. Build the app**
