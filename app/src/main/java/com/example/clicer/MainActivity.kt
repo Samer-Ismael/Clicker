@@ -49,7 +49,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun playSound() {
-        mediaPlayer = MediaPlayer.create(this, R.raw.clicker) // Ensure the resource ID is correct
+        mediaPlayer = MediaPlayer.create(this, R.raw.clicker)
         mediaPlayer?.start()
     }
 
@@ -65,20 +65,20 @@ fun ClickableCircle(modifier: Modifier = Modifier, onClick: () -> Unit) {
     Box(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp), // Add padding around the circle
-        contentAlignment = Alignment.Center // Center the circle
+            .padding(16.dp),
+        contentAlignment = Alignment.Center
     ) {
         Box(
             modifier = Modifier
                 .size(300.dp)
                 .background(
                     brush = Brush.linearGradient(
-                        colors = listOf(Color(0xFF4CAF50), Color(0xFF388E3C)), // Gradient from light to dark green
+                        colors = listOf(Color(0xFF4CAF50), Color(0xFF388E3C)),
                         start = Offset(0f, 0f),
                         end = Offset(300f, 300f)
                     ),
                     shape = CircleShape
-                ) // Circle background with gradient
+                )
                 .border(
                     BorderStroke(4.dp, Brush.linearGradient(
                         colors = listOf(Color.White, Color.LightGray),
@@ -86,21 +86,21 @@ fun ClickableCircle(modifier: Modifier = Modifier, onClick: () -> Unit) {
                         end = Offset(300f, 300f)
                     )),
                     shape = CircleShape
-                ) // A more pronounced border with a subtle gradient
+                )
                 .shadow(12.dp, CircleShape, ambientColor = Color.Black.copy(alpha = 0.2f), spotColor = Color.Black) // Enhanced shadow for a 3D effect
-                .clickable(onClick = onClick), // Make the circle clickable
-            contentAlignment = Alignment.Center // Center the text inside the box
+                .clickable(onClick = onClick),
+            contentAlignment = Alignment.Center
         ) {
             Text(
                 text = "Smokey & Lolo",
                 color = Color.White,
                 style = TextStyle(
-                    fontSize = 24.sp, // Slightly larger font size for emphasis
+                    fontSize = 24.sp,
                     fontWeight = FontWeight.Bold,
-                    letterSpacing = 1.75.sp, // Slightly increased letter spacing for readability
-                    fontFamily = FontFamily.Serif // Use a professional font like Serif
+                    letterSpacing = 1.75.sp,
+                    fontFamily = FontFamily.Serif
                 ),
-                modifier = Modifier.padding(16.dp) // Add some padding around the text
+                modifier = Modifier.padding(16.dp)
             )
         }
     }
