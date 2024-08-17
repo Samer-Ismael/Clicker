@@ -1,10 +1,9 @@
 # **Clicker**
 
-Clicker is a straightforward and effective app designed to help you train your cat using clicker techniques. Unlike many other apps, Clicker is completely free and ad-free, providing a seamless experience for you and your feline friend.
+Clicker is a straightforward and effective app designed to help you train your cat using clicker techniques. Unlike many other apps, Clicker is completely free and ad-free.
 
-## **Features**-**Simple and Intuitive**: Easy-to-use interface, perfect for quick and efficient training sessions.
--**Ad-Free**: Enjoy an uninterrupted training experience without any annoying ads.
--**Free to Use**: No hidden costs or in-app purchases. Clicker is completely free.
+## **Features**-**Simple and Intuitive**: Click and you will hear a sound. It's that simple. No need to navigate through menus or settings.
+Made because I couldn't find a simple clicker app that was free and ad-free,
 
 ## **Getting Started**
 
