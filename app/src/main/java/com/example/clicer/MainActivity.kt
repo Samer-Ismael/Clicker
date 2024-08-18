@@ -1,14 +1,12 @@
 package com.example.clicer
 
+import android.media.Image
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -26,6 +24,8 @@ import com.example.clicer.ui.theme.ClicerTheme
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 
 class MainActivity : ComponentActivity() {
@@ -65,20 +65,21 @@ fun ClickableCircle(modifier: Modifier = Modifier, onClick: () -> Unit) {
     Box(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp),
-        contentAlignment = Alignment.Center
+            .padding(16.dp), // Add padding around the circle
+        contentAlignment = Alignment.Center // Center the circle
     ) {
+        // Background Image
+        Image(
+            painter = painterResource(id = R.drawable._0210507_144655), // Ensure the resource ID is correct
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop // Scale the image to fill the entire background
+        )
+
+        // Clickable Circle
         Box(
             modifier = Modifier
                 .size(300.dp)
-                .background(
-                    brush = Brush.linearGradient(
-                        colors = listOf(Color(0xFF4CAF50), Color(0xFF388E3C)),
-                        start = Offset(0f, 0f),
-                        end = Offset(300f, 300f)
-                    ),
-                    shape = CircleShape
-                )
                 .border(
                     BorderStroke(4.dp, Brush.linearGradient(
                         colors = listOf(Color.White, Color.LightGray),
@@ -88,19 +89,19 @@ fun ClickableCircle(modifier: Modifier = Modifier, onClick: () -> Unit) {
                     shape = CircleShape
                 )
                 .shadow(12.dp, CircleShape, ambientColor = Color.Black.copy(alpha = 0.2f), spotColor = Color.Black) // Enhanced shadow for a 3D effect
-                .clickable(onClick = onClick),
-            contentAlignment = Alignment.Center
+                .clickable(onClick = onClick), // Make the circle clickable
+            contentAlignment = Alignment.Center // Center the text inside the box
         ) {
             Text(
                 text = "Smokey & Lolo",
                 color = Color.White,
                 style = TextStyle(
-                    fontSize = 24.sp,
+                    fontSize = 24.sp, // Slightly larger font size for emphasis
                     fontWeight = FontWeight.Bold,
-                    letterSpacing = 1.75.sp,
-                    fontFamily = FontFamily.Serif
+                    letterSpacing = 1.75.sp, // Slightly increased letter spacing for readability
+                    fontFamily = FontFamily.Serif // Use a professional font like Serif
                 ),
-                modifier = Modifier.padding(16.dp)
+                modifier = Modifier.padding(16.dp) // Add some padding around the text
             )
         }
     }
