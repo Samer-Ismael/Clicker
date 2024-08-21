@@ -100,7 +100,7 @@ fun ClickableCircle(modifier: Modifier = Modifier, onClick: () -> Unit) {
                 style = TextStyle(
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Bold,
-                    letterSpacing = 5.sp,
+                    letterSpacing = 2.sp,
                     fontFamily = FontFamily.Serif
                 ),
                 modifier = Modifier.padding(16.dp)
