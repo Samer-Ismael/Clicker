@@ -76,6 +76,8 @@ fun ClickableCircle(modifier: Modifier = Modifier, onClick: () -> Unit) {
             contentScale = ContentScale.Crop
         )
 
+
+
         // Clickable Circle
         Box(
             modifier = Modifier
