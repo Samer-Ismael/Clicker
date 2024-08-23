@@ -1,4 +1,4 @@
-package com.example.clicer.ui.theme
+package com.myApp.clicker
 
 import androidx.compose.ui.graphics.Color
 

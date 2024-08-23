@@ -1,4 +1,4 @@
-package com.example.clicer
+package com.example.clicker
 
 import org.junit.Test
 

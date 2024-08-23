@@ -1,6 +1,5 @@
-package com.example.clicer
+package com.myApp.clicker
 
-import android.media.Image
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,13 +19,13 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.draw.shadow
 import androidx.compose.foundation.shape.CircleShape
-import com.example.clicer.ui.theme.ClicerTheme
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
+import com.myApp.clicer.R
 
 class MainActivity : ComponentActivity() {
     private var mediaPlayer: MediaPlayer? = null

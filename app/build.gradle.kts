@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.clicer"
+    namespace = "com.myApp.clicer"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.clicer"
+        applicationId = "com.myApp.clicer"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -18,12 +18,27 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        bundle {
+            abi {
+                enableSplit = true
+            }
+        }
+    }
+
+    signingConfigs {
+        create("release") {
+            keyAlias = "key0"
+            keyPassword = "Samer512"
+            storeFile = file("C:/Users/samer/IdeaProjects/Clicer/app/release-key.jks") // Corrected path
+            storePassword = "Samer512"
+        }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
